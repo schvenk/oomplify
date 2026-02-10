@@ -1,6 +1,6 @@
 import esbuild from "esbuild";
-import { mkdir, rm, copyFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { mkdir, rm, copyFile, cp } from "node:fs/promises";
+import { resolve } from "node:path";
 
 const watch = process.argv.includes("--watch");
 const outdir = "dist";
@@ -8,6 +8,7 @@ const outdir = "dist";
 const copyStaticFiles = async () => {
   await mkdir(outdir, { recursive: true });
   await copyFile("manifest.json", resolve(outdir, "manifest.json"));
+  await cp("icons", resolve(outdir, "icons"), { recursive: true });
 };
 
 await rm(outdir, { recursive: true, force: true });
