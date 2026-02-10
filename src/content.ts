@@ -1,5 +1,4 @@
 const REPLACEMENTS: Array<[RegExp, string]> = [
-  [/\bAGI\b/g, "GOL"],
   [/\bartificial intelligence\b/gi, "Oompa-Loompas"],
   [/\bAI\b/g, "Oompa-Loompas"],
 ];

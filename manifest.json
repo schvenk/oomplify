@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Oompa-Loompa Swap",
+  "name": "Oomplify",
   "version": "1.0.0",
   "description": "Replaces AI terms on LinkedIn with Oompa-Loompas.",
   "content_scripts": [
